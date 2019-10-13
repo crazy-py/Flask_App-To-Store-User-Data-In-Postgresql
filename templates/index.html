@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Height Data</title>
+    <head>
+        <link rel="stylesheet" href="../static/main.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Collecting Height Data</h1>
+            <h3>Please Fill These Data To Help Me In My Project</h3>
+            <div class="message">
+                {{text | safe}}
+            </div>
+            <form action="{{url_for('redirect')}}" method="POST">
+                <input type="email" name="email_address" placeholder="Your Email Address" required> 
+                <input type="text" name="country" placeholder="Your Country"><br>
+                <input type="number" name="height" placeholder="Enter Your Height In CM" min="50" max="200">
+                <input type="number" name="weight" placeholder="Your Weight In Kilograms"> <br>
+                <button type="submit">Submit</button>
+            </form>
+
+        </div>
+
+
+    </body>
+
+</html>
